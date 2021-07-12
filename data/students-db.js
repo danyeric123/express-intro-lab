@@ -1,5 +1,6 @@
 export { 
-	find
+	find,
+  findById
 }
 
 class Student{
@@ -31,4 +32,8 @@ const find = (conditions, callback) => {
     console.log(error)
     callback(error, [])
   }
+}
+
+const findById = (id)=>{
+  return students.find(student=>student._id==id)
 }
